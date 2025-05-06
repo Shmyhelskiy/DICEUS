@@ -1,0 +1,126 @@
+[
+  {
+    "id": "acc_nam_001",
+    "accountName": "NAMEX Tech Solutions",
+    "accountType": "Large Enterprise",
+    "line": "D&O Liability",
+    "broker": "Willis Towers",
+    "renewalDate": "04/16/2025",
+    "premium": {
+      "value": 2300000,
+      "display": "$2.3M"
+    },
+    "ratedPremium": {
+      "value": 2800000,
+      "display": "$2.8M"
+    },
+    "lossRatio": {
+      "percentage": 32,
+      "level": "good" 
+    },
+    "appetite": "HIGH",
+    "status": {
+      "key": "active",
+      "display": "Active",
+      "indicator": "green"
+    },
+    "triage": 180,
+    "winnability": {
+      "level": 5,
+      "text": "Very Strong"
+    }
+  },
+  {
+    "id": "acc_all_002",
+    "accountName": "Alliance Healthcare Systems",
+    "accountType": "Mid-Market",
+    "line": "Medical Malpractice",
+    "broker": "Aon Risk",
+    "renewalDate": "06/30/2025",
+    "premium": {
+      "value": 1700000,
+      "display": "$1.7M"
+    },
+    "ratedPremium": {
+      "value": 1900000,
+      "display": "$1.9M"
+    },
+    "lossRatio": {
+      "percentage": 38,
+      "level": "average"
+    },
+    "appetite": "MEDIUM",
+    "status": {
+      "key": "under_review",
+      "display": "Under review",
+      "indicator": "blue"
+    },
+    "triage": 165,
+    "winnability": {
+      "level": 4,
+      "text": "Strong"
+    }
+  },
+  {
+    "id": "acc_mar_003",
+    "accountName": "Maritime Logistics Corp",
+    "accountType": "Shipping/Logistics",
+    "line": "Marine Cargo",
+    "broker": "Marsh McLennan",
+    "renewalDate": "09/05/2025",
+    "premium": {
+      "value": 875000,
+      "display": "$875K"
+    },
+    "ratedPremium": {
+      "value": 920000,
+      "display": "$920K"
+    },
+    "lossRatio": {
+      "percentage": 25,
+      "level": "good"
+    },
+    "appetite": "HIGH",
+    "status": {
+      "key": "active",
+      "display": "Active",
+      "indicator": "green"
+    },
+    "triage": 182,
+    "winnability": {
+      "level": 5,
+      "text": "Very Strong"
+    }
+  },
+  {
+    "id": "acc_gre_004",
+    "accountName": "Green Field Energy Ltd",
+    "accountType": "Energy Sector",
+    "line": "Environmental Liability",
+    "broker": "Aon Risk",
+    "renewalDate": "07/22/2025",
+    "premium": {
+      "value": 1200000,
+      "display": "$1.2M"
+    },
+    "ratedPremium": {
+      "value": 1400000,
+      "display": "$1.4M"
+    },
+    "lossRatio": {
+      "percentage": 67,
+      "level": "poor"
+    },
+    "appetite": "CAUTIOUS",
+    "status": {
+      "key": "under_review",
+      "display": "Under review",
+      "indicator": "blue"
+    },
+    "triage": 158,
+    "winnability": {
+      "level": 3,
+      "text": "Medium"
+    }
+  }
+]

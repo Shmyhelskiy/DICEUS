@@ -1,0 +1,165 @@
+{
+  "id": "AR-001",
+  "firstName": "Arthur",
+  "lastName": "Reynolds",
+  "email": null,
+  "role": "Admin",
+  "assignedTasks": [
+    {
+      "taskId": "WQ-001",
+      "originator": {
+        "userId": "SM-101",
+        "firstName": "Sam",
+        "lastName": "Masters"
+      },
+      "client": "NAMEX Tech Solutions",
+      "line": "Cyber Liability",
+      "type": "Underwriter Referral",
+      "status": "New",
+      "createdDate": "2025-04-16"
+    },
+    {
+      "taskId": "WQ-002",
+      "originator": {
+        "userId": "AW-102",
+        "firstName": "Annalise",
+        "lastName": "Willis"
+      },
+      "client": "Maritime Logistics Corp",
+      "line": "Marine Cargo",
+      "type": "Underwriter Referral",
+      "status": "New",
+      "createdDate": "2025-04-20"
+    },
+    {
+      "taskId": "WQ-003",
+      "originator": {
+        "userId": "PD-103",
+        "firstName": "Patrick",
+        "lastName": "Devenport"
+      },
+      "client": "GreenField Energy Ltd",
+      "line": "Environmental",
+      "type": "Loss Control Request",
+      "status": "New",
+      "createdDate": "2025-04-16"
+    },
+    {
+      "taskId": "WQ-004",
+      "originator": {
+        "userId": "AK-104",
+        "firstName": "Ana",
+        "lastName": "Killian"
+      },
+      "client": "NorthStar Financial Group",
+      "line": "D&O Liability",
+      "type": "Underwriter Referral",
+      "status": "Pending Review",
+      "createdDate": "2025-04-22"
+    },
+    {
+      "taskId": "WQ-005",
+      "originator": {
+        "userId": "AK-104",
+        "firstName": "Ana",
+        "lastName": "Killian"
+      },
+      "client": "Alliance Healthcare Systems",
+      "line": "Medical Malpractice",
+      "type": "Email",
+      "status": "Completed",
+      "createdDate": "2025-04-28"
+    },
+    {
+      "taskId": "WQ-006",
+      "originator": {
+        "userId": "AR-001",
+        "firstName": "Arthur",
+        "lastName": null
+      },
+      "client": "QuantumTech Industries",
+      "line": "Product Liability",
+      "type": "Email",
+      "status": "Completed",
+      "createdDate": "2025-04-20"
+    },
+    {
+      "taskId": "WQ-007",
+      "originator": {
+        "userId": "SM-101",
+        "firstName": "Sam",
+        "lastName": "Masters"
+      },
+      "client": "CyberSecure Inc.",
+      "line": "Tech E&O",
+      "type": "Underwriter Referral",
+      "status": "Pending Review",
+      "createdDate": "2025-05-02"
+    },
+    {
+      "taskId": "WQ-008",
+      "originator": {
+        "userId": "AW-102",
+        "firstName": "Annalise",
+        "lastName": "Willis"
+      },
+      "client": "Global Shipping Co.",
+      "line": "Hull & Machinery",
+      "type": "Email",
+      "status": "Pending Review",
+      "createdDate": "2025-04-18"
+    },
+    {
+      "taskId": "WQ-009",
+      "originator": {
+        "userId": "PD-103",
+        "firstName": "Patrick",
+        "lastName": "Devenport"
+      },
+      "client": "Solaris Energy",
+      "line": "Environmental",
+      "type": "Loss Control Request",
+      "status": "Pending Review",
+      "createdDate": "2025-05-10"
+    },
+    {
+      "taskId": "WQ-010",
+      "originator": {
+        "userId": "AR-001",
+        "firstName": "Arthur",
+        "lastName": null
+      },
+      "client": "FinTech Innovations",
+      "line": "D&O Liability",
+      "type": "Policy Review",
+      "status": "Pending Review",
+      "createdDate": "2025-05-05"
+    },
+    {
+      "taskId": "WQ-011",
+      "originator": {
+        "userId": "AK-104",
+        "firstName": "Ana",
+        "lastName": "Killian"
+      },
+      "client": "MediCare Partners",
+      "line": "Medical Malpractice",
+      "type": "Email",
+      "status": "Pending Review",
+      "createdDate": "2025-04-30"
+    },
+    {
+      "taskId": "WQ-012",
+      "originator": {
+        "userId": "BL-105",
+        "firstName": "Brenda",
+        "lastName": "Lee"
+      },
+      "client": "Constructo Corp.",
+      "line": "General Liability",
+      "type": "Underwriter Referral",
+      "status": "Pending Review",
+      "createdDate": "2025-05-11"
+    }
+  ]
+}
