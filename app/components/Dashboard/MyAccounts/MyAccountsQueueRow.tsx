@@ -1,8 +1,9 @@
 import { FC } from "react";
 import clsx from "clsx";
-import { AccountData } from "@/app/types/accounts";
+import { AccountData } from "@/app/types/accounts/accounts";
 import { EllipsisVertical } from "lucide-react";
 import AcountStatusBadge from "./AcountStatusBadge";
+import CustomLink from "../../commons/CustomLink";
 
 type Props = {
   account: AccountData;
@@ -11,7 +12,7 @@ type Props = {
 
 const MyAccountsQueueRow: FC<Props> = ({account, count}) => {
   const {accountName, accountType, line, broker, renewalDate, premium, ratedPremium, lossRatio, appetite, status, triage, winnability} = account;
-  const rowBgClass = count % 2 === 0 ? '' : 'bg-white/4';
+  const rowBgClass = count % 2 === 0 ? '' : 'bg-insideGray';
 
   let bglossRatio;
 
@@ -71,18 +72,21 @@ const MyAccountsQueueRow: FC<Props> = ({account, count}) => {
       <td className='px-2 text-xs'>
         <div className="inline-flex items-center gap-2 border border-blue-400 rounded-full text-blue-500 px-2 py-1">
           <div className="flex items-center gap-1">
-          {Array.from({ length: winnability.level }).map((_, index) => (
-            <div key={index} className="h-2 w-2 bg-blue-400 rounded-full" />
-          ))}
+            {Array.from({ length: winnability.level }).map((_, index) => (
+              <div key={index} className="h-2 w-2 bg-blue-500 rounded-full" />
+            ))}
           </div>
 
           <span>{winnability.text}</span>
         </div>
       </td>
       <td className='px-2 text-center'>
-        <button className=' p-1 rounded-full cursor-pointer border-1 border-white'>
-           <EllipsisVertical  size={14} className='stroke-white'/>
-        </button>
+        <CustomLink
+          path={`/accounts/${account.id}`}
+          className="p-1 rounded-full cursor-pointer border border-white inline-flex items-center justify-center"
+        >
+          <EllipsisVertical size={14} className="stroke-white" />
+        </CustomLink>
       </td>
     </tr>
   )

@@ -12,7 +12,7 @@ const WorkQueueTable: React.FC<WorkQueueTableProps> = ({ tasks, userId }) => {
   
   return (
     <table className="w-full">
-      <thead className='bg-white/4'> 
+      <thead className='bg-insideGray'> 
         <tr>
           <th 
             className="p-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[20%]"

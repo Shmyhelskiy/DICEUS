@@ -5,6 +5,7 @@ import UserAvatar from '../../commons/UserAvatar';
 import { formatDate, getFullName } from '@/app/utils/stringUtils';
 import clsx from 'clsx';
 import StatusBadge from './StatusBadge';
+import CustomLink from '../../commons/CustomLink';
 
 interface WorkQueueRowProps {
   userId: string;
@@ -22,7 +23,7 @@ const WorkQueueRow: React.FC<WorkQueueRowProps> = ({ userId, task, count }) => {
     fullName = 'Me';
   };
  
-  const rowBgClass = count % 2 === 0 ? '' : 'bg-white/4';
+  const rowBgClass = count % 2 === 0 ? '' : 'bg-insideGray';
 
   return (
     <tr className={clsx('transition-colors group align-middle text-white/75 text-sm', rowBgClass)}>
@@ -50,9 +51,9 @@ const WorkQueueRow: React.FC<WorkQueueRowProps> = ({ userId, task, count }) => {
       </td>
       <td className='px-2 text-gray-300 whitespace-nowrap'>{formatDate(createdDate)}</td>
       <td className='px-2 text-center'>
-        <button className=' p-1 rounded-full cursor-pointer border-1 border-white'>
+        <CustomLink path='/' className=' p-1 rounded-full cursor-pointer border-1 border-white'>
            <EllipsisVertical  size={14} className='stroke-white'/>
-        </button>
+        </CustomLink>
       </td>
     </tr>
   );
