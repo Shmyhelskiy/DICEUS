@@ -4,13 +4,12 @@ import { FC } from "react"
 type ProgresLineProps = {
   color: string;
   height: string;
+  weight: string;
 };
 
-const ProgresLine: FC<ProgresLineProps> = ({color, height}) => {
+const ProgresLine: FC<ProgresLineProps> = ({color, height, weight}) => {
   return (
-    <div className={clsx('rounded-r-full', color, height)}>
-
-    </div>
+    <div className={clsx('rounded-r-full', color, height)} style={{ width: weight }} />
   )
 }
 

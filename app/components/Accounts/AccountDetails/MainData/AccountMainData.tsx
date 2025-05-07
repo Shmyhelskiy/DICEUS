@@ -4,8 +4,9 @@ import MetricCard from "@/app/components/commons/MetricCard";
 import LineChart from "./LineChart";
 import TargetProgressBar from "@/app/components/commons/TargetProgressBar";
 import clsx from "clsx";
-import { CircleArrowDown, CircleArrowUp } from "lucide-react";
+import { CircleArrowDown, CircleArrowUp, Rocket } from "lucide-react";
 import ProgresLine from "./ProgresLine";
+import RecommendationCard from "./RecommendationCard";
 
 
 
@@ -17,10 +18,10 @@ type AccountMainDataProps = {
 
 const AccountMainData: FC<AccountMainDataProps> = ({data, title}) => {
   return (
-    <div className="p-5">
-      <h4 className="text-5xl mb-5">{title}</h4>
+    <div className="p-5 flex flex-col gap-5">
+      <h4 className="text-5xl">{title}</h4>
 
-      <div className="flex gap-2 mb-5"> 
+      <div className="flex gap-2"> 
       <MetricCard className="bg-insideGray rounded-3xl flex flex-col w-1/3 p-4">
         <h5 className="font-light text-2xl pb-2">
           {data?.winnability.overallScore.title}
@@ -73,38 +74,81 @@ const AccountMainData: FC<AccountMainDataProps> = ({data, title}) => {
       <div className="grid grid-cols-2 w-full gap-2">
         <MetricCard className="bg-insideGray rounded-3xl flex flex-col p-4">
           <div className="flex items-center gap-2 mb-5">
-            <CircleArrowUp size={24} className="text-green-400"/>
+            <CircleArrowUp size={30} className="text-green-400"/>
             <h5 className="font-light text-2xl">
               {data?.winnability.increasingFactors.title}
             </h5>
           </div>
 
-          <div className="flex gap-2 text-lg font-light">
-            <div className="border-1 border-green-400 rounded-full w-6">
-              <span>{data?.winnability.increasingFactors.data[0].rank}</span>
+          {data?.winnability.increasingFactors.data.map((item) => {
+            return <div className="flex gap-2 text-lg font-light pb-5" key={item.id}>
+            <div 
+              className="flex items-center justify-center border border-green-400 text-green-400 rounded-full w-10 h-10 text-sm"
+            >
+              <span>{item.rank}</span>
             </div>
-            <div>
-              <p>
-                {data?.winnability.increasingFactors.data[0].label}
+            <div className={`flex flex-col w-full`}>
+              <p className="w-fit">
+                {item.label}
               </p>
-              <ProgresLine color="greenGradient" height="h-5"/>
-            </div>
 
-            <div className="">
-              <span> +{data?.winnability.increasingFactors.data[0].impactPercentage}%</span>
+              <div className="flex items-center gap-1">
+                <ProgresLine color='greenGradient' height="h-5" weight={`${item.barValue}%`}/>
+                <span className="text-gray-400 text-lg">
+                  +{item.impactPercentage}%
+                </span>
+              </div>
             </div>
           </div>
+          })}
         </MetricCard>
         
 
         <MetricCard className="bg-insideGray rounded-3xl flex flex-col p-4">
           <div className="flex items-center gap-2 mb-5">
-            <CircleArrowDown size={24} className="text-orange-300"/>
+            <CircleArrowDown size={30} className="text-orange-300"/>
             <h5 className="font-light text-2xl">
               {data?.winnability.decreasingFactors.title}
             </h5>
           </div>
-          <p className=""></p>
+
+          {data?.winnability.decreasingFactors.data.map((item) => {
+            return <div className="flex gap-2 text-lg font-light pb-5" key={item.id}>
+            <div 
+              className="flex items-center justify-center border text-orange-200 border-orange-200 rounded-full w-10 h-10 text-sm"
+            >
+              <span>{item.rank}</span>
+            </div>
+            <div className={`flex flex-col w-full`}>
+              <p className="w-fit">
+                {item.label}
+              </p>
+
+              <div className="flex items-center gap-1">
+                <ProgresLine color='orangeGradient' height="h-5" weight={`${item.barValue}%`}/>
+                <span className="text-gray-400 text-lg">
+                  {item.impactPercentage}%
+                </span>
+              </div>
+            </div>
+          </div>
+          })}
+
+        </MetricCard>
+      </div>
+
+      <div className="bg-insideGray p-5 rounded-3xl">
+        <MetricCard className="flex flex-col gap-5">
+          <div className="flex items-center gap-2">
+            <Rocket  size={30} className="text-green-300"/>
+            <h5 className="font-light text-2xl text-green-300">
+              AI-Powered Recommendations
+            </h5>
+          </div>
+
+          {data?.aiPoweredRecommendations.map((item) => {
+            return <RecommendationCard key={item.id} title={item.title} text={item.description} />
+          })}
         </MetricCard>
       </div>
     </div>
