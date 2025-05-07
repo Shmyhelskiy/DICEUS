@@ -136,6 +136,7 @@ const PortfolioGoals = () => {
             current={newBusiness.current} 
             target={newBusiness.target} 
             unit={newBusiness.unit}
+            height='h-6'
           />
           <p className='text-xs'>{`$${newBusiness.target}${newBusiness.unit}`}</p>
         </div>
@@ -146,6 +147,7 @@ const PortfolioGoals = () => {
             current={annualGwp.current} 
             target={annualGwp.target} 
             unit={annualGwp.unit}
+            height='h-6'
           />
           <p className='text-xs'>{`$${annualGwp.target}${annualGwp.unit}`}</p>
         </div>

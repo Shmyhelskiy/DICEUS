@@ -1,4 +1,4 @@
-import { AccountsApiResponse } from "./accounts";
+import { AccountsApiResponse } from "./accounts/accounts";
 
 interface Originator {
   userId: string;

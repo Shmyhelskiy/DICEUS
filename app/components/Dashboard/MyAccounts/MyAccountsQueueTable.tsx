@@ -1,4 +1,4 @@
-import { AccountsApiResponse } from '@/app/types/accounts';
+import { AccountsApiResponse } from '@/app/types/accounts/accounts';
 import React from 'react';
 import MyAccountsQueueRow from './MyAccountsQueueRow';
 
@@ -11,7 +11,7 @@ interface WorkQueueTableProps {
 const MyAccountsQueueTable: React.FC<WorkQueueTableProps> = ({ accounts }) => {
   return (
     <table className="w-full">
-      <thead className='bg-white/4'>
+      <thead className='bg-insideGray'>
         <tr>
           <th
             className="py-2 pl-4 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[17%]"
