@@ -1,3 +1,4 @@
+import { headers } from 'next/headers';
 import AccountDetails from "@/app/components/Accounts/AccountDetails/AccountDetails";
 import AccountStatus from "@/app/components/Accounts/AccountStatus/AccountStatus";
 import Communication from "@/app/components/Accounts/Communication/Communication";
@@ -14,9 +15,15 @@ type AccountPageProps = {
   }>;
 };
 
+
 async function getAccountData(accountId: string): Promise<AccountData | null> {
+  const reqHeaders = await headers();
+  const host = reqHeaders.get('host');
+  const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
+  const baseUrl = `${protocol}://${host}`;
+  
   try {
-    const res = await fetch(`/api/accounts/${accountId}`, {
+    const res = await fetch(`${baseUrl}/api/accounts/${encodeURIComponent(accountId)}`, {
       cache: "no-store",
     });
 
@@ -37,7 +44,7 @@ async function getAccountData(accountId: string): Promise<AccountData | null> {
 export default async function AccountPage({ params }: AccountPageProps) {
   const { accountId } = await params;
   const account = await getAccountData(accountId);
-  
+
   if (!account) {
     return <section>Account not found</section>;
   }

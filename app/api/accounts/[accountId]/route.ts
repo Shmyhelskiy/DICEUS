@@ -4,11 +4,10 @@ import { AccountData, AccountsApiResponse } from '@/app/types/accounts/accounts'
 
 export async function GET(
   request: Request,
-  context: { params: Promise<{ accountId: string }> } // змінено тип з об'єкта на Promise
+  context: { params: Promise<{ accountId: string }> }
 ) {
   const { accountId } = await context.params;
   const allAccounts = accountData as AccountsApiResponse;
-
   const foundAccount = allAccounts.find(
     (account: AccountData) => account.id === accountId
   );
