@@ -14,9 +14,11 @@ type AccountPageProps = {
   }>;
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+
 async function getAccountData(accountId: string): Promise<AccountData | null> {
   try {
-    const res = await fetch(`http://localhost:3000/api/accounts/${accountId}`, {
+    const res = await fetch(`${baseUrl}/api/accounts/${accountId}`, {
       cache: "no-store",
     });
 
