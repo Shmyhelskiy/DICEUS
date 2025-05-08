@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
 import TargetProgressBar from '../../commons/TargetProgressBar';
 
@@ -33,7 +32,6 @@ const PortfolioGoals = () => {
   };
 
   const greenWidthPercentage = renewalRetention.targetMax - renewalRetention.targetMin;
-
   return (
     <div 
       className='p-5 rounded-3xl flex flex-col gap-2 pb-7 text-xxs'

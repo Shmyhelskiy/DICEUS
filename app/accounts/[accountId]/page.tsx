@@ -1,12 +1,14 @@
 import AccountDetails from "@/app/components/Accounts/AccountDetails/AccountDetails";
 import AccountStatus from "@/app/components/Accounts/AccountStatus/AccountStatus";
+import Communication from "@/app/components/Accounts/Communication/Communication";
 import ComplianceDocumentation from "@/app/components/Accounts/ComplianceDocumentation/ComplianceDocumentation";
 import AccountsHeader from "@/app/components/Accounts/Header/AccountsHeader";
 import PerformanceMetricsSection from "@/app/components/Accounts/PerformanceMetrics/PerformanceMetricsSection";
+import PoliceisTableContainer from "@/app/components/Accounts/PoliceisTable/PoliceisTableContainer";
 import PoliciesSection from "@/app/components/Accounts/Policies/PoliciesSection";
 import { AccountData } from "@/app/types/accounts/accounts";
 
-interface AccountPageProps {
+type  AccountPageProps = {
   params: {
     accountId: string; 
   };
@@ -14,7 +16,9 @@ interface AccountPageProps {
 
 async function getAccountData(accountId: string): Promise<AccountData | null> {
   try {
-    const res = await fetch(`http://localhost:3000/api/accounts/${accountId}`);
+    const res = await fetch(`http://localhost:3000/api/accounts/${accountId}`, {
+      cache: "no-store",
+    });
 
     if (!res.ok) {
       if (res.status === 404) {
@@ -31,7 +35,7 @@ async function getAccountData(accountId: string): Promise<AccountData | null> {
 }
 
 export default async function AccountPage({ params }: AccountPageProps) {
-  const { accountId } = await params; 
+  const { accountId } = await params;
   const account = await getAccountData(accountId);
   
   if (!account) {
@@ -39,7 +43,7 @@ export default async function AccountPage({ params }: AccountPageProps) {
   }
 
   return (
-    <section>
+    <main className="flex flex-col gap-10">
       <AccountsHeader name={account.accountName} broker={account.broker}/>
       <PerformanceMetricsSection  winnability={account.winnability} lossRatio={account.lossRatio}/>
       <PoliciesSection />
@@ -53,6 +57,8 @@ export default async function AccountPage({ params }: AccountPageProps) {
       </div>
 
          <AccountDetails />
-    </section>
+         <Communication />
+         <PoliceisTableContainer />
+    </main>
   );
 }

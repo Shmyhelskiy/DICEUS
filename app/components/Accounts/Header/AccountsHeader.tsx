@@ -11,8 +11,8 @@ type AccountsHeaderProps = {
 
 const AccountsHeader: FC<AccountsHeaderProps> = ({name, broker}) => {
   return (
-    <div>
-      <p className="text-sm mb-5">
+    <section>
+      <p className="text-sm">
         Dashboard // Accounts // {' '}
           <span className="text-blue-500">
             {name}
@@ -48,7 +48,7 @@ const AccountsHeader: FC<AccountsHeaderProps> = ({name, broker}) => {
 
         <NeedsAttentionBanner />
       </div>
-    </div>
+    </section>
   )
 }
 

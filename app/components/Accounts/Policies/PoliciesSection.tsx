@@ -55,7 +55,7 @@ const iconComponents: Record<string, React.ElementType> = {
 
 const PoliciesSection = () => {
   return (
-    <section className='mb-10'>
+    <article>
       <div>
         <h2 className="text-3xl mb-6">Policies</h2>
 
@@ -76,7 +76,7 @@ const PoliciesSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </article>
   );
 };
 
