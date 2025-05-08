@@ -1,7 +1,5 @@
 import { FC } from "react";
 
-;
-
 type PolicyCardProps = {
   icon: React.ReactNode;
   name: string;

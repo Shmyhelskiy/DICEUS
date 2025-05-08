@@ -6,7 +6,7 @@ import WorkQueue from "./components/Dashboard/WorkQueue/WorkQueue";
 
 export default function DashboardPage() {
   return (
-    <div className="grid grid-cols-6 gap-6">
+    <main className="grid grid-cols-6 gap-6">
       <section className="col-span-4 rounded-3xl border-1 border-white/10 bg-customGray "> 
         <WorkQueue />
       </section>
@@ -29,6 +29,6 @@ export default function DashboardPage() {
         <MyAccounts />
       </section>
 
-    </div>
+    </main>
   );
 }

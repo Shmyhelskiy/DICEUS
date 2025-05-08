@@ -23,3 +23,7 @@ export function formatDate(dateString: string): string {
   const [year, month, day] = dateString.split('-');
   return `${month}/${day}/${year}`;
 }
+
+export const normalizedNumber = (num: number): string => {
+  return '$' + num.toLocaleString('en-US');;
+};

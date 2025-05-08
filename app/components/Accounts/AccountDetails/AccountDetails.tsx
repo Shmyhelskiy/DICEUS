@@ -75,14 +75,14 @@ const winnabilityPageData = {
           rank: 2,
           label: "Loss history",
           impactPercentage: 22,
-          barValue: 75
+          barValue: 60
         },
         {
           id: "industry-growth",
           rank: 3,
           label: "Industry growth",
           impactPercentage: 16,
-          barValue: 60
+          barValue: 75
         },
         {
           id: "multiline-opportunity",
@@ -152,7 +152,7 @@ const AccountDetails = () => {
 
   return (
     <section>
-      <h3 className="text-3xl mb-6">
+      <h3 className="text-3xl">
         Account Details
       </h3>
 
@@ -171,6 +171,7 @@ const AccountDetails = () => {
           <AccountMainData data={winnabilityPageData} title={selectedItem[0].label}/>
         </div>
       </div>
+
     </section>
   )
 }

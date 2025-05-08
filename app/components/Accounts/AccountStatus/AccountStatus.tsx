@@ -20,7 +20,7 @@ const accountStatusStepsData: StatusStep[] = [
 
 const AccountStatus = () => {
   return (
-    <section className='mb-10'>
+    <section>
       <h3 className="text-3xl mb-6">Account Status</h3>
       <div className="bg-customGray px-15 pt-6 pb-15 rounded-2xl border border-white/10 w-full">
         <div className="flex items-center"> 

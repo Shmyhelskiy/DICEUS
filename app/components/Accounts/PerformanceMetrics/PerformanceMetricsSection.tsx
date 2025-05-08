@@ -18,7 +18,7 @@ const exposureData = [
 
 const PerformanceMetricsSection: FC<Props> = ({winnability, lossRatio }) => {
   return (
-    <section className="mb-20"> 
+    <section> 
       <div>
         <h2 className="text-3xl mb-8">Performance Metrics</h2>
 

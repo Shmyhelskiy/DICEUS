@@ -17,9 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="layout-margine mt-4">
+        <div className="layout-margine mt-4">
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );
