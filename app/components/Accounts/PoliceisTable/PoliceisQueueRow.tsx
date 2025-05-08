@@ -72,7 +72,7 @@ const PoliceisQueueRow:FC<PoliceisQueueRowProps> = ({data, count}) => {
         <span>{expDate}</span>
       </td>
       <td className='px-2'>
-        <StatusPoliceBadge statusText={status.text}/>
+        <StatusPoliceBadge statusText={status}/>
       </td>
       <td className='px-2'>
         {expiringTech ? `${normalizedNumber(expiringTech)}%` : 'N/A'}

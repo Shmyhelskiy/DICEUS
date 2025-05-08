@@ -49,7 +49,9 @@ const AccountMainData: FC<AccountMainDataProps> = ({data, title}) => {
         </h5>
         
         <div className="w-full max-h-16 flex justify-center">
-          <LineChart historicalTrend={data?.winnability.historicalTrend}/>
+        {data?.winnability.historicalTrend && (
+          <LineChart historicalTrend={data.winnability.historicalTrend} />
+        )}
         </div>
       </MetricCard>
 

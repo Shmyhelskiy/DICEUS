@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import AccountMainData from "./MainData/AccountMainData";
 import AccountDetailsSidebar from "./SideBar/AccountDetailsSidebar"
+import { Month, WinnabilityRatingText } from '@/app/types/accounts/accountsDetailMain';
 
 const sidebarData = [
   {
@@ -39,17 +40,17 @@ const winnabilityPageData = {
       percentage: 82,
       rating: {
         level: 5,
-        text: "Very Strong",
+        text: "Very Strong" as WinnabilityRatingText,
       }
     },
     historicalTrend: {
       title: 'Historical Trend',
       data: [
-        { month: "Jan", value: 20 },
-        { month: "Feb", value: 60 },
-        { month: "Mar", value: 20 },
-        { month: "Apr", value: 70 },
-        { month: "Now", value: 100 }
+        { month: "Jan" as Month, value: 20 },
+        { month: "Feb" as Month, value: 60 },
+        { month: "Mar" as Month, value: 20 },
+        { month: "Apr" as Month, value: 70 },
+        { month: "Now" as Month, value: 100 }
       ]
     },
     position: {

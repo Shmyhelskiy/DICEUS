@@ -58,7 +58,7 @@ const Communication = () => {
 
       <article className="bg-customGray p-6 rounded-2xl shadow-xl border-1 border-white/10 flex flex-col gap-6">
         <SearchAndFilter />
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='grid grid-cols-2 gap-6 '>
           {mockData.map((item) => (
             <CommunicationCard
               key={item.id}

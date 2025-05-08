@@ -8,11 +8,11 @@ import PoliceisTableContainer from "@/app/components/Accounts/PoliceisTable/Poli
 import PoliciesSection from "@/app/components/Accounts/Policies/PoliciesSection";
 import { AccountData } from "@/app/types/accounts/accounts";
 
-type  AccountPageProps = {
-  params: {
-    accountId: string; 
-  };
-}
+type AccountPageProps = {
+  params: Promise<{
+    accountId: string;
+  }>;
+};
 
 async function getAccountData(accountId: string): Promise<AccountData | null> {
   try {

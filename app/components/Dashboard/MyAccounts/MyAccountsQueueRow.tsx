@@ -1,6 +1,6 @@
 import { FC } from "react";
 import clsx from "clsx";
-import { AccountData } from "@/app/types/accounts/accounts";
+import { AccountData, StatusKey } from "@/app/types/accounts/accounts";
 import { EllipsisVertical } from "lucide-react";
 import AcountStatusBadge from "./AcountStatusBadge";
 import CustomLink from "../../commons/CustomLink";
@@ -61,7 +61,7 @@ const MyAccountsQueueRow: FC<Props> = ({account, count}) => {
       </td>
       <td className='px-2 text-xs'>
         <div className="flex items-center">
-          <AcountStatusBadge status={status.display} />
+          <AcountStatusBadge status={status.display as StatusKey} />
         </div>
       </td>
       <td className='px-2 text-xs'>

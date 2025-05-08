@@ -7,7 +7,7 @@ type LossRatioLevel = 'good' | 'average' | 'poor';
 
 type AppetiteLevel = 'HIGH' | 'MEDIUM' | 'CAUTIOUS';
 
-type StatusKey = 'active' | 'under_review';
+export type StatusKey = 'Active' | 'Under review';
 
 type StatusIndicatorColor = 'green' | 'blue';
 
@@ -36,7 +36,7 @@ export type AccountData = {
   appetite: AppetiteLevel;
   status: {
     key: StatusKey;
-    display: string;
+    display: StatusKey;
     indicator: StatusIndicatorColor;
   };
   triage: number;

@@ -47,7 +47,7 @@ const LineChart: FC<LineChartProps> = ({ historicalTrend }) => {
           color: '#6B7280',
           font: {
             size: 12,
-            weight: '500'
+            weight: 500,
           }
         }
       },

@@ -1,6 +1,6 @@
-type WinnabilityRatingText = "Very Strong" | "Strong" | "Medium" | "Weak" | "Very Weak";
+export type WinnabilityRatingText = "Very Strong" | "Strong" | "Medium" | "Weak" | "Very Weak";
 
-type Month = "Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug" | "Sep" | "Oct" | "Nov" | "Dec" | "Now";
+export type Month = "Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" | "Jul" | "Aug" | "Sep" | "Oct" | "Nov" | "Dec" | "Now";
 
 type TrendPoint = {
   month: Month;

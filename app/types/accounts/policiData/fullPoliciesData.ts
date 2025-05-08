@@ -1,9 +1,4 @@
-export type PolicyStatus = {
-  text: string;
-  colorClass: string;
-};
-
-
+export type PolicyStatusText = "Active" | "Pending";
 
 export type LossRatio = {
   display: string;
@@ -18,7 +13,7 @@ export type FullPolicyItem = {
   name: string;
   effDate: string;
   expDate: string;
-  status: PolicyStatus;
+  status: PolicyStatusText;
   rateChange: number;
   expiringTech: number;
   expiringPremium: number;

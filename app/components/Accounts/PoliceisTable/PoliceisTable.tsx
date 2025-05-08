@@ -1,6 +1,7 @@
 import PoliceisQueueRow from './PoliceisQueueRow';
+import { FullPoliciesData } from '@/app/types/accounts/policiData/fullPoliciesData';
 
-const policiesData = [
+const policiesData: FullPoliciesData = [
   {
     id: '17030212',
     iconName: 'Ship',
@@ -8,7 +9,7 @@ const policiesData = [
     name: 'Marine Cargo',
     effDate: '6/30/2026',
     expDate: '6/30/2027',
-    status: { text: 'Active', colorClass: 'bg-green-500' },
+    status: 'Active',
     expiringTech: 610000,
     expiringPremium: 625000,
     renewalToTech: 567000,
@@ -24,7 +25,7 @@ const policiesData = [
     name: 'General Liability',
     effDate: '6/30/2026',
     expDate: '6/30/2027',
-    status: { text: 'Active', colorClass: 'bg-green-500' },
+    status: 'Active',
     expiringTech: 610000,
     expiringPremium: 625000,
     renewalToTech: 567000,
@@ -40,7 +41,7 @@ const policiesData = [
     name: 'Workers Comp',
     effDate: 'Pending',
     expDate: 'Pending',
-    status: { text: 'Pending', colorClass: 'bg-yellow-500' },
+    status: 'Pending',
     expiringTech: 0,
     expiringPremium: 0,
     renewalToTech: 0,
@@ -56,7 +57,7 @@ const policiesData = [
     name: 'Property',
     effDate: '13/03/2026',
     expDate: '13/03/2027',
-    status: { text: 'Active', colorClass: 'bg-green-500' },
+    status: 'Active',
     expiringTech: 610000,
     expiringPremium: 625000,
     renewalToTech: 567000,
@@ -72,7 +73,7 @@ const policiesData = [
     name: 'Umbrella',
     effDate: '13/03/2026',
     expDate: '13/03/2027',
-    status: { text: 'Active', colorClass: 'bg-green-500' },
+    status: 'Active',
     expiringTech: 610000,
     expiringPremium: 625000,
     renewalToTech: 567000,
@@ -86,83 +87,53 @@ const policiesData = [
 const PoliceisTable = () => {
   return (
     <table className="w-full">
-      <thead className='bg-insideGray'>
+      <thead className="bg-insideGray">
         <tr>
-          <th
-            className="py-2 pl-4 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[18%]"
-          >
+          <th className="py-2 pl-4 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[18%]">
             Line
           </th>
-          <th
-            className="p-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[10%]"
-          >
+          <th className="p-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[10%]">
             Eff. Date
           </th>
-          <th
-            className="p-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[10%]"
-          >
+          <th className="p-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[10%]">
             Exp. Date
           </th>
-          <th
-            className="p-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[7%]"
-          >
+          <th className="p-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[7%]">
             Status
           </th>
-          <th
-            className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[8%]"
-          >
+          <th className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[8%]">
             Expiring Tech
           </th>
-          <th
-            className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[8%]"
-          >
+          <th className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[8%]">
             Expiring Premium
           </th>
-          <th
-            className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[8%]"
-          >
+          <th className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[8%]">
             Renewal to Tech
           </th>
-          <th
-            className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[8%]"
-          >
+          <th className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[8%]">
             Renewal Tech
           </th>
-          <th
-            className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[9%]"
-          >
+          <th className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[9%]">
             Reneval Premium
           </th>
-          <th
-            className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[5%]"
-          >
+          <th className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[5%]">
             Rate Change
           </th>
-          <th
-            className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[7%]"
-          >
+          <th className="pl-2 text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[7%]">
             Loss Ratio
           </th>
-          <th
-            className="text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[2
-            %]"
-          >
+          <th className="text-left text-xxs font-light text-gray-400 uppercase tracking-wider w-[2%]">
             {/* Колонка для іконки додаткової інформації */}
           </th>
         </tr>
       </thead>
-
       <tbody>
         {policiesData.map((item, index) => (
-          <PoliceisQueueRow
-            key={item.id}
-            data={item}
-            count={index}
-          />
+          <PoliceisQueueRow key={item.id} data={item} count={index} />
         ))}
       </tbody>
     </table>
-  )
-}
+  );
+};
 
-export default PoliceisTable
+export default PoliceisTable;
