@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 
 
 export const metadata: Metadata = {
-  title: "Diceus",
+  title: "DICEUS",
   description: "Test work",
 };
 
