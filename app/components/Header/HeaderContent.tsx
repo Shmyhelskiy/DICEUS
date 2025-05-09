@@ -22,7 +22,7 @@ const HeaderContent: FC<HeaderContentProprs> = ({user}) => {
         <SearchInput 
           type='text' 
           placeholder='Search'
-          value={search} 
+          value={search}
           onChange={(e) => setSearch(e.target.value)}
           className='bg-customGray text-white/50 rounded-full px-4 py-2 w-full'
         />
